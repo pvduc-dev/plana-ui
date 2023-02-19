@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.0.0](https://github.com/pvduc-dev/plana-ui/compare/v2.6.0...v3.0.0) (2023-02-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* update ci workflow
+* update ci workflow
+
+### Features
+
+* update ci workflow ([cbfaac2](https://github.com/pvduc-dev/plana-ui/commit/cbfaac2f34586947affbdffb0fbd6c48929695b5))
+* update ci workflow ([3f77a66](https://github.com/pvduc-dev/plana-ui/commit/3f77a66d41abe625ba43e5bf45497d87afaad3e6))
+
 ## [2.6.0](https://github.com/pvduc-dev/plana-ui/compare/v2.5.0...v2.6.0) (2023-02-18)
 
 

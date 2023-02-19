@@ -1,6 +1,6 @@
 {
   "name": "plana-ui",
-  "version": "2.6.0",
+  "version": "3.0.0",
   "type": "module",
   "main": "./dist/plana.umd.js",
   "module": "./dist/plana.es.js",
