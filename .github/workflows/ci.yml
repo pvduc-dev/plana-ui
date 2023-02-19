@@ -1,14 +1,14 @@
 name: CI
 
 on:
-#  push:
-#    branches:
-#      - 'feature/**'
-#      - 'bugfix/**'
-#      - 'hotfix/**'
-  pull_request:
+  push:
     branches:
-      - dev
+      - 'feature/**'
+      - 'bugfix/**'
+      - 'hotfix/**'
+#  pull_request:
+#    branches:
+#      - develop
 
 env:
   NODE_VERSION: 16
@@ -19,12 +19,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
       - run: npm ci
-      - run: npx commitlint --from HEAD~${{ github.event.pull_request.commits }} --to HEAD
+      - run: npx commitlint --from ${{ github.event.push.base.sha }} --to ${{ github.event.push.head.sha }} --verbose
 
   lint-code:
     runs-on: ubuntu-latest
