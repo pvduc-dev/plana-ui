@@ -1,14 +1,8 @@
 name: CI
 
 on:
-  push:
-    branches:
-      - 'feature/**'
-      - 'bugfix/**'
-      - 'hotfix/**'
   pull_request:
-    branches:
-      - develop
+    - develop
 
 env:
   NODE_VERSION: 16
